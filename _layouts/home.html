@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article>
+  <h1>The Saint of Machine</h1>
+  <h2>Notes</h2>
+  <ol class="post-list">
+    {%- for post in site.posts -%}
+    <li>
+      {%- assign date_format = site.minima.date_format | default: "%B %d, %Y" -%}
+      <a class="post-link" href="{{ post.url | relative_url }}">
+          <strong>{{ post.title | escape }}</strong>
+      </a><hfill/><i><small>{{ post.date | date: date_format }}</small></i>
+      
+      {%- if site.show_excerpts -%}
+        {{ post.excerpt }}
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ol>
+  <h2>About</h2>
+  See <a href="https://twitter.com/SaintOfMachine">this</a>.
+</article>

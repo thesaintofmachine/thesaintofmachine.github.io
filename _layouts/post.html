@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article>
+  <h1>{{ page.title | escape }}</h1>
+  <h2>
+      The Saint of Machine
+  </h2>
+  <time datetime="{{ page.date | date_to_xmlschema }}">
+      {%- assign date_format = site.minima.date_format | default: "%B %d, %Y" -%}
+      On <i>{{ page.date | date: date_format }}</i>. 
+  </time>
+  <section>
+    {{ content }}
+  </section>
+</article>
