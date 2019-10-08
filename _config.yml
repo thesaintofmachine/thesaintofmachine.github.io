@@ -6,3 +6,4 @@ twitter_username: saintofmachine
 github_username:  thesaintofmachine
 highlighter: rouge
 markdown: kramdown
+future: true
